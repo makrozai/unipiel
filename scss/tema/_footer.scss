@@ -1,0 +1,104 @@
+.footer-copy{
+  background:darken($negro,2);
+}
+.blanco{
+  color: $blanco;
+}
+.main{
+  &-subtitle{
+    color: $blanco;
+    text-align: center;
+  }
+  &-footer{
+    background: $negro;
+    padding: 1em 0 0;
+    margin-top: 4em;
+    &,
+    .mail,
+    &__subtitle{
+      color: $blanco;
+    }
+    &__subtitle{
+      font-size: 1.5em;
+      margin-bottom:1em;
+    }
+    &__link{
+      text-align: center;
+      text-transform: capitalize;
+      @include button($blanco,$negro,round);
+      transition:all .3s;
+      &:hover{
+        background:$negro;
+        color: $blanco;
+        box-shadow:0 0 0 2px;
+      }
+      @include hasta(tablet){
+        margin-top: 1.5em;
+      }
+    }
+    &__menu{
+      padding:0;
+    }
+    &__item{
+      margin:.5em 0;
+      @include hasta(tablet){
+        text-align: center;
+      }
+      
+    }
+    &__contact{
+      a.item{
+        display: flex;
+        flex-wrap: wrap;
+        @include hasta(tablet){
+        justify-content: center;
+        }
+      }
+      @include hasta(tablet){
+        text-align: center;
+      }
+      i{
+        padding:0 1em;
+        font-size: 1.5em;
+      }
+    }
+    &__logo{
+      width: 60%;
+      margin:30px auto 0;
+      @include hasta(tablet){
+        margin-bottom: 2em;
+      }
+    }
+    &__copy{
+      padding-top:1em;
+      display: flex;
+      justify-content: space-between;
+      @include hasta(tablet){
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        padding:1.5em 0;
+      }
+    }
+    &__social{
+      font-size: 2em;
+      box-shadow:0 0 0 0 transparent;
+      transition:all .3s;
+      margin:0 .5em;
+      &:hover{
+        box-shadow:0 0 0 1px $blanco;
+      }
+    }
+    &__enlace{
+      flex-direction: column;
+    }
+  }    
+}
+.border-left{
+  @include desde(tablet){
+    border-right:4px dashed $blanco;
+    &:last-of-type{
+      border:none;
+    }
+  }
+}

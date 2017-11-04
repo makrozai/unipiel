@@ -3,48 +3,90 @@ html(lang="es")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="css/slick.css")
     link(rel="stylesheet", href="css/styles.css")
-    title ED-GRID
+    link(href="https://file.myfontastic.com/caRvxmKyEAEVdBdxw8r87j/icons.css" rel="stylesheet")
+    title Unipiel | ternura sobre tu piel
   body
-    header
+    //<div id="fb-root"></div>
+    //<script>
+      (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.5";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    //</script>
+    include include/menu
+    include include/header
+    main.main
       .ed-container
-        .ed-item.web-20
-          img(src="img/logo.png").logo
-        .ed-item.web-80.main-end.cross-center
-          | Versión 1.2
-    nav
+        .ed-item.tablet-1-3.cross-center
+          p.main-description
+            |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        .ed-item.tablet-1-3.cross-center.main-title
+          h1.main-title__title Ternura sobre tu piel
+        .ed-item.tablet-1-3.cross-center
+          p.main-description
+            |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+          a(href="#!").main-link mas información
+    section.main-section
       .ed-container
+        //.ed-item.main-center.main-section__view
+        //  #circle-js.js-carousel.main-section--modal.circle
+        //    .circle-box
+        //      img(src="img/cartera-1.png" alt="esta es la iamgen del modal")
         .ed-item
-          ul.ed-menu.nav-bar.web-horizontal
-            li
-              a(href="#") Item 1
-              ul
-                li: a(href="#") Subitem 1
-                li: a(href="#") Subitem 2
-                li
-                  a(href="#") Subitem 3
-                  ul
-                    li: a(href="#") Sub-item 1
-                    li: a(href="#") Sub-item 2
-                    li: a(href="#") Sub-item 3
-                    li: a(href="#") Sub-item 4
-                li: a(href="#") Subitem 4
-            li: a(href="#") Item 2
-            li: a(href="#") Item 3
-            li: a(href="#") Item 4
-            li: a(href="#") Item 5
-            li: a(href="#") Item 6
-            li: a(href="#") Item 7
-    .ed-container
-      .ed-item.web-75
-        h2 ¿Qué es ED GRID?
-        p ED GRID es un framework para Responsive Web Design construido en español, con Sass y mucho café.
-        p Con ED GRID puede crear layouts y prototipos responsive con mucha facilidad, con una metodología fácil de aprender.
-        p ED GRID 1.2 viene con Flexbox. Adios a los floats
-        p Esta versión incluye botones y menús desplegables.
-        p Si solo desea ED GRID para incluirlo en un proyecto (y no toda la estructura de carpetas que ha descargado) copie la carpeta scss/ed-grid/ y listo
-        a.button.round Este es un boton
-      .ed-item.web-25.abcenter
-        a(href="http://escueladigital.pe" target="_blank") Escuela Digital
+          .slider.slider-for
+            .modal
+              img(src="img/cartera-2.png" alt="esta es la iamgen del modal")
+            .modal
+              img(src="img/cartera-3.png" alt="esta es la iamgen del modal")
+            .modal
+              img(src="img/cartera-4.png" alt="esta es la iamgen del modal")
+            .modal
+              img(src="img/cartera-1.png" alt="esta es la iamgen del modal")
+            .modal
+              img(src="img/cartera-2.png" alt="esta es la iamgen del modal")
+          .slider.slider-nav
+            .modal
+              img(src="img/cartera-2.png" alt="esta es la iamgen del modal")
+            .modal
+              img(src="img/cartera-3.png" alt="esta es la iamgen del modal")
+            .modal
+              img(src="img/cartera-4.png" alt="esta es la iamgen del modal")
+            .modal
+              img(src="img/cartera-1.png" alt="esta es la iamgen del modal")
+            .modal
+              img(src="img/cartera-2.png" alt="esta es la iamgen del modal")
+    aside.main-aside
+      .ed-container
+        .ed-item.tablet-65
+          h2.main-aside__title youtube
+          .ed-video.main-aside__video.shadow
+            iframe(width="560" height="315" src="https://www.youtube.com/embed/GRvAw5RGJoo" frameborder="0" allowfullscreen)
+        .ed-item.tablet-35.main-aside__facebook.cross-end
+          h2.main-aside__title Facebook
+          <div class="fb-page shadow" data-href="https://www.facebook.com/cueros.unipiel" data-tabs="timeline" data-width="100%" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/cueros.unipiel"><a href="https://www.facebook.com/cueros.unipiel">Unipiel</a></blockquote></div></div>
+        .ed-item.tablet-35.main-aside__instagram
+          h2.main-aside__title Instragram
+          .main-aside__boxInstagram.shadow
+            .hover__effect
+              a(href="#!")
+                i.icon-instagram
+            img(src="img/instagram.jpg")
+        .ed-item.tablet-65.main-aside__noticia
+          h2.main-aside__title Noticia
+          .main-aside__boxNoticia.shadow
+            .hover__noticia
+              h3 La noticia del dia
+              p una breve descripcion muy corta pero precisa para el lector
+            img(src="img/image-2.jpg" alt="esta es la imagen del footer")
+    include include/footer
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+    script(type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js")
+    script(src="js/jquery.slides.js")
+    script(src="js/slick.js")
     script(src="js/scripts.js")
+    script(src="js/header.js")

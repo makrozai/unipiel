@@ -1,0 +1,92 @@
+.date{
+  padding-top:10em;
+  &-list{
+    padding:0;
+    margin-top: 0;
+    &__link{
+      display: block;
+      padding:1em;
+      transition:all .3s;
+      &:hover{
+          background: $negro;
+          color: $blanco;
+      }
+    }
+  }
+  &-galery{
+    background:rgba($negro,.97);
+    padding:1em;
+    @include grid(date-galery__item,1);
+    margin: 0 auto;
+    @include desde(movil){
+      @include grid(date-galery__item,2);
+    }
+    @include desde(tablet){
+      @include grid(date-galery__item,3);
+    }
+    &__item{
+      box-shadow:0 0 3px 1px $negro;
+      transition:all .3s;
+      background: $blanco;
+      &:hover{
+        box-shadow:0 0 7px 3px $negro;
+      }
+    }
+    &__title{
+      margin: 0 0 .5em;
+      text-align:center;
+    }
+    &__radio{
+      background:$rojo;
+      display: block;
+      margin:1em .5em;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      transition:all .3s;
+      &.active,
+      &:hover{
+        box-shadow:0 0 0 2px $blanco,
+                   0 0 0 4px $rojo;
+      }
+    }
+  }
+}
+.content-slider{
+  .modal{
+    height: 250px;
+    img{
+      border-radius: 0;
+      height: 100%;
+      width: auto;
+
+    }
+    &:after{
+      display: none;
+    }
+  }
+}
+.slick-dots{
+  display: flex !important;
+  padding:0;
+  justify-content: center;
+  margin:0;
+
+  button{
+    border:none;
+    outline: 0;
+    background:$rojo;
+    width: 30px;
+    height: 30px;
+    padding:0;
+    margin: .5em .5em 0;
+    text-indent:-666em;
+    overflow:hidden;
+  }
+  & > li:nth-of-type(2) button{
+    background: $azul;
+  }
+  & > li:nth-of-type(3) button{
+    background: $gris-oscuro;
+  }
+}

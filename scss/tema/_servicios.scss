@@ -1,0 +1,76 @@
+.servicios{
+  padding-top:4em;
+  @include desde(tablet){
+    padding-top:9em;
+  }
+  &-content{
+    background: rgba($negro,.98);
+    color: $blanco;
+    margin-top: 3em;
+  }
+  &-box{
+    &__title{
+      font-size: 4em;
+      position:relative;
+      z-index: 10;
+      margin-top:0;
+      margin-bottom: 7rem;
+      line-height: 1;
+    }
+    &__image{
+      padding:1.5em 0;
+      img{
+        max-width: 100%;
+        height: auto;
+        max-height: 400px;
+      }
+      .slider-for{
+        margin-bottom:1em;
+        img{
+          border-radius: 0;
+          height: auto;
+          width: auto;
+        }
+      }
+      .slider-nav{
+        background: $negro;
+      }
+    }
+    &__description{
+      overflow: hidden;
+      position: relative;
+      &:after{
+        content: "";
+        border: 10px solid $gris-oscuro;
+        position:absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 50%;
+        width: 100%;
+        height: 350px;
+        background: $blanco;
+        @include desde(tablet){
+          width: 60%;
+          height: 250px;
+        }
+      }
+    }
+    &__copy{
+      max-width: 500px;
+      margin:0 auto;
+      @include hasta(tablet){
+        text-align: center;
+      }
+    }
+  }
+  &-content:nth-of-type(even) &-box__description{
+    @include desde(tablet){
+      order:1;
+      text-align: right;
+    }
+  }
+  &--modal{
+    margin:1em auto;
+  }
+}

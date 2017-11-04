@@ -1,0 +1,47 @@
+.contact{
+  padding-top:9em;
+  @include desde(tablet){
+    padding-top:4rem;
+  }
+  &-title{
+    font-size: 1.5em;
+    line-height: 2em;
+    @include desde(tablet){
+      font-size: 2.5em;
+    }
+    h2{
+      margin-bottom: 1em;
+      @include desde(tablet){
+        margin-bottom:.2em;
+      }
+    }
+  }
+  &-subtitle{
+    font-size: 3.5em;
+    line-height: 1em;
+  }
+  &-description p{
+    max-width: 600px;
+    margin:0 auto;
+  }
+  &-form{
+    max-width: 700px;
+    &__label{
+      font-weight: $bold;
+      color: $negro;
+    }
+    &__box{
+      width: 100%;
+    }
+    &__button{
+      @include button($negro,$blanco)
+      font-size: 1.3em;
+      transition:all .3s;
+      &:hover{
+        background: $blanco;
+        color:$negro;
+        box-shadow:0 0 0 2px $negro;
+      }
+    }
+  }
+}

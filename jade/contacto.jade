@@ -1,0 +1,31 @@
+extends template/basis
+block content
+  .contact
+    .ed-container
+      .ed-item.contact-title.text-center
+        h2 Servicio al Cliente
+      .ed-item.contact-description.text-center
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      .ed-item.text-center
+        h3.contact-subtitle Motivo del Contacto
+    form(action="validacion.php" method="post").ed-container.contact-form
+      .ed-item.tablet-50
+        label(for="select").contact-form__label Escoja su área
+        select.contact-form__box(name="area" required)
+          option(value="valor1") valor1
+          option(value="valor2") valor2
+          option(value="valor3") valor3
+      .ed-item
+        label(for="name").contact-form__label Nombres y Apellidos
+        input#name(type="text" required).contact-form__box
+      .ed-item.tablet-50
+        label(for="telefono").contact-form__label Teléfono
+        input#telefono(type="tel" required).contact-form__box
+      .ed-item.tablet-50
+        label(for="email").contact-form__label Correo
+        input#email(type="email" required).contact-form__box
+      .ed-item
+        label(for="message").contact-form__label Mensaje
+        textarea#message.contact-form__box(name="textarea", cols="30", rows="10" required)
+      .ed-item.main-end
+        input(type="submit" value="enviar").contact-form__button

@@ -1,0 +1,31 @@
+.mujer{
+  &-item{
+    &__title{
+      font-size: 4.5em;
+      line-height: 1em;
+    }
+    &__galery{
+      margin-top: 2em;
+      border-radius:5px;
+      padding:.5em;
+      background: $negro;
+      @include grid(mujer-item__image,1);
+      @include desde(movil){
+        @include grid(mujer-item__image,3);
+      }
+    }
+    &__image{
+      background: $blanco;
+    }
+    &__carousel{
+      border-radius:5px;
+      background: $negro;
+      padding: 1.5em;
+      height: 100%;
+      &--content{
+        height: 100%;
+        background: $blanco;
+      }
+    }
+  }
+}

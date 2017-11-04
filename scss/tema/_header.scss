@@ -1,0 +1,49 @@
+.main-header{
+  .slick-slider{
+    margin-bottom:0;
+  }
+  .slider{
+    margin-top: 4.3em;
+    position:relative;
+    .slick-arrow{
+      position:absolute;
+      top: 50%;
+      z-index: 10;
+      border:none;
+      outline: 0;
+      background: transparent;
+      color: $negro;
+      line-height: 1;
+      padding: 0;
+      margin:0;
+      font-size: 4.5em;
+      opacity: 0;
+      transition:all .3s;
+      &:hover{
+        opacity: 1;
+      }
+      @include hasta(tablet){
+        display: none !important;
+      }
+    }
+    .slick-next{
+      right: 0;
+    }
+    .slick-prev{
+      left: 0;
+    }
+  }
+  @include desde(tablet){
+    .slider.single-item{
+    height: calc(100vh - 4.3em);
+    }
+    .box.slick-slide{
+      height: calc(100vh - 4.3em);
+      background: $blanco;
+      img{
+        width: 100vw;
+      }
+    }
+  }
+  
+}

@@ -1,0 +1,126 @@
+.slider-for .modal{
+  height: 500px;
+  position:relative;
+  $box-modal:275px;
+  $box-content:250px;
+  img{
+    margin:0 auto;
+    width: 200px;
+    height: 200px;
+    background: $blanco;
+    border-radius:40px;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%,-50%);
+    @include desde(tablet){
+      border-radius:20px;
+      width: 270px;
+      height: 270px;
+    }
+  }
+  &:before,
+  &:after{
+    content:"";
+    border-radius:50%;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%,-50%);
+  }
+  &:before{
+    width: $box-content;
+    height: $box-content;
+    background: $blanco;
+    @include desde(tablet){
+      width: 390px;
+      height: 390px;
+    }
+  }
+  &:after{
+    width: $box-modal;
+    height: $box-modal;
+    background:linear-gradient(
+                          $negro 35%,
+                          transparent 35%,
+                          transparent 65%,
+                          $negro 65%);
+    z-index: -1;
+    @include desde(tablet){
+      width: 430px;
+      height: 430px;
+    }
+  }
+}
+.main-section .slider-nav .modal{
+  @include desde(tablet){
+    width: 230px !important;
+  }
+  
+}
+.slider-nav .modal{
+  @include desde(tablet){
+    padding:1em;
+  }
+  background: $negro;
+  img{
+    background: $blanco;
+    @include desde(tablet){
+      max-height: 150px;
+      margin:0 auto;
+    }
+  }
+}
+.circle{
+  width: 20em;
+  height: 20em;
+  display: flex;
+  @include hasta(tablet){
+    width: 15em;
+    height: 15em;
+  }
+  background:red;
+  border-radius: 50%;
+  background:linear-gradient(
+                            $negro 35%,
+                            transparent 35%,
+                            transparent 65%,
+                            $negro 65%);
+  &-box{
+    overflow: hidden;
+    position:relative;
+    margin:auto;
+    border-radius:50%;
+    width: 90%;
+    height: 90%;
+    background:$blanco;
+    img{
+    position: absolute;
+    height: 80%;
+    margin:0 auto;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%,-50%);
+    }
+  }
+}
+a.subrayado{
+  position:relative;
+  padding:.3em 0;
+  &:hover:after{
+    width: 100%;
+  }
+  &:after{
+    content: "";
+    position:absolute;
+    width: 0;
+    height: 2px;
+    background: $blanco;
+    bottom:0;
+    left:0;
+    transition:all .3s
+  }
+}
+.shadow{
+  box-shadow:0 0 0 5px $negro;
+}

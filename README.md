@@ -1,28 +1,6 @@
-## ED-GRID
+## UNIPIEL
 
-ED GRID  es un FRAMEWORK SOLO CSS para crear diseños web responsive y mobile first.
-
-Documentación oficial: http://escueladigital.pe/ed-grid
-
-Autor: Álvaro Felipe de Escuela Digital http://escueladigital.pe
-
-Colaborador: Daniel Guillermo Romero http://adsiar.com
-
-
-Este repositorio incluye las siguientes carpetas:
-
-* **css** - contiene ed-grid.css (copie este archivo en su proyecto para usar ed-grid en su versión css)
-* **ed-grid** - contiene ed-grid en su version sass. Puede copiar esta carpeta en sus proyectos para incluir edgrid con sass.
-* **scss** - contiene archivos adicionales sass para poder comenzar con su proyecto
-
-### ED-GRID + Gulp.js
-Los cambios de la versión 1.2.1 de ED-GRID corresponden al trabajo con Gulp.js.
-
-Gulp.js es un sistema de construcción que permite automatizar tareas comunes de desarrollo, tales como la minificación de código JavaScript, recarga del navegador, compresión de imágenes, validación de sintaxis de código y un sin fin de tareas más.
-
-Para usar ED-GRID con Gulp.js se requiere tener instalado Node.js, el sitio oficial es https://nodejs.org, se recomienda la versión 5.
-
-Adicionalmente, para usar los comandos descritos más adelante tal cual, se debe tener Gulp instalado de manera global, puedes verificar si lo tienes ejecutando el siguiente comando:
+Primer prototipo para unipiel marca de ropa en cueros, tienda virtual en sass y pug(en ese momento era jade)
 
 ```
 gulp --version

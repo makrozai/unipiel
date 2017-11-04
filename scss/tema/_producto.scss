@@ -1,0 +1,130 @@
+.producto{
+  padding-top:4em;
+  @include desde(tablet){
+    padding-top:8em;
+  }
+  &-image{
+    .single-item{
+      box-shadow:0 0 0 3px $negro;
+      height: 400px;
+      @include desde(tablet){
+        height: 600px;
+      }
+      .modal{
+        height: 400px;
+        background: $blanco;
+        @include desde(tablet){
+          height: 600px;
+        }
+        position: relative;
+        img{
+          position:absolute;
+          top: 50%;
+          left: 50%;
+          transform:translate(-50%,-50%);
+          border-radius: 0;
+          width: auto;
+          height: auto;
+        }
+        &:after{
+          display: none;
+        }
+      }
+    }
+    .slick-dots{
+      position: absolute;
+      top: 40em;
+      left: 50%;
+      @include desde(tablet){
+        top: 30%;
+        left: 130%;
+      }
+      @include desde(web){
+        left: 130%;
+      }
+      transform:translateX(-50%);
+      button{
+        width: 3em;
+        height: 3em;
+      }
+    }
+  }
+  &-description{
+    &__title{
+      text-align:center;
+      text-transform: capitalize;
+      font-size: 4em;
+      margin:0 0 1em;
+      @include desde(tablet){
+        line-height: 1rem;
+        text-align: left;
+      }
+    }
+    &__color{
+      text-align:center;
+      @include desde(tablet){
+        text-align:left;
+      }
+      
+      &__carousel{
+        display: flex;
+        @include hasta(tablet){
+          justify-content: center;
+        }
+      }
+    }
+    &__butons{
+      margin-top: 10em;
+      display: flex;
+      flex-wrap: wrap;
+      @include hasta(tablet){
+        justify-content: center;
+      }
+      a {
+        @include button($negro,$blanco);
+        margin-left :1em;
+        transition:all .3s;
+        &:hover{
+          box-shadow:0 0 0 2px $negro;
+          background: $blanco;
+          color: $negro;
+        }
+        &:before{
+          margin-right: .5em;
+        }
+      }
+    }
+    .slider-nav{
+      .modal{
+        background: $rojo;
+        width: 2.5em;
+        height: 2.5em;
+        margin: 1em .5em;
+      }
+    }
+  }
+  &-content{
+    background: $negro;
+    margin-top: 2em;
+  }
+  &-spam{
+    padding-bottom:1em;
+    &__title{
+      h3{
+        color:$blanco;
+      }
+    }
+  }
+}
+.multiple-items{
+  .modal{
+    img{
+      @include desde(tablet){
+        margin:0 auto;
+        height: 200px;
+      }
+      background: $blanco;
+      
+    }
+  }
+}

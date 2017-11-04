@@ -17,29 +17,29 @@
   $azul        : steelblue;
   $azul-oscuro : #255484;
   $azul-claro  : lighten(steelblue,25%);
-  $negro       : #070D12;
+  $negro       : #0F0F0F;
   $blanco      : #FDFDFD;
   $gris        : #ccc;
   $gris-oscuro : #444;
   $gris-claro  : #f0f0f0;
-  $rojo        : darken(tomato,10);
+  $rojo        : #FDFDFD;//darken(tomato,10);
 
 // ESTILOS BASE
-  $body--background  : #fff;                      // fondo para el body
+  $body--background  : url("../img/background.jpg") no-repeat  center center/ cover;//#fff;                      // fondo para el body
   $body--font-family : 'Open Sans', sans-serif;   // fuente predeterminada
   $body--color       : #333;                      // color de texto predeterminado
 
 // ESTILOS DE ENCABEZADOS
-  $header--font-family    : 'Open Sans', sans-serif;  // fuente para los headers (h1,h2,h3...)
-  $header--font-weight    : $bold;                    // grosor de fuente para los headers
+  $header--font-family    : 'vijaya', sans-serif;//'Open Sans', sans-serif;  // fuente para los headers (h1,h2,h3...)
+  $header--font-weight    : $normal;                    // grosor de fuente para los headers
   $header--text-transform : normal;                   // normal, uppercase, lowercase, capitalize
   $header--color          : #222;                     // color predeterminado de los header
 
 // TAMAÑO DE LOS ENCABEZADOS (h1...h6)
-  $h1--font-size : 2em;
-  $h2--font-size : 1.6em;
-  $h3--font-size : 1.3em;
-  $h4--font-size : 1em;
+  $h1--font-size : 4.5em;
+  $h2--font-size : 2.5em;
+  $h3--font-size : 2em;
+  $h4--font-size : 1.5em;
   $h5--font-size : .9em;
   $h6--font-size : .8em;
 
@@ -68,6 +68,15 @@
   @import "tema/footer";
   @import "tema/main";
   @import "tema/aside";
+  @import "tema/extenciones";
+  @import "tema/main-section";
+  @import "tema/contact";
+  @import "tema/local";
+  @import "tema/nosotros";
+  @import "tema/servicios";
+  @import "tema/mujer";
+  @import "tema/date";
+  @import "tema/producto";
 
 // Modulos. Los componentes que se repiten en varias partes del proyecto
   @import "modulos/modulos";

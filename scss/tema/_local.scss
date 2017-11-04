@@ -1,0 +1,34 @@
+.local{
+
+    padding-top:9.5rem;
+  &-title{
+    font-size: 5em;
+    //color:$rojo;
+    line-height: .8;
+    @include desde(tablet){
+      line-height: 0;
+    }
+  }
+  &-address{
+
+    > li{
+      color:$negro;
+      margin:2em 0;
+      cursor: pointer;
+      transition: all .3s;
+      &:hover{
+        color: $azul;
+      }
+      >ul{
+        margin-top: .5em;
+      }
+    }
+  }
+  &-map{
+    iframe{
+      margin:0 auto;
+      max-width: 100%;
+      display: block;
+    }
+  }
+}
